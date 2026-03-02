@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "react-native-expo-template-2026",
-    "slug": "react-native-expo-template-2026",
+    "name": "位置情報送信アプリ",
+    "slug": "actual-length-position-information-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,7 +13,17 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.actualposition.locationtracker",
+      "infoPlist": {
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "このアプリは位置情報を常に取得して記録します。",
+        "NSLocationWhenInUseUsageDescription": "このアプリは位置情報を取得して記録します。",
+        "UIBackgroundModes": [
+          "location",
+          "location"
+        ],
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -25,6 +35,11 @@
     "web": {
       "bundler": "metro",
       "favicon": "./assets/icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b5d9c088-ee2a-4c03-8883-9e97ddfd65a9"
+      }
     }
   }
 }
